@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #b2afaf;
+    padding: 2rem;
+    gap: 1rem;
+}
+.logo {
+    width: 10%;
+    max-width: 100%;
+    height: auto;
+}
+.contenedor-de-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.card {
+    flex: 1 1 300px;
+    max-width: 100%;  
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
+.texto {
+    padding: 10px;
+    background-color: rgba(243, 241, 241, 0.8);
+    width: 100%;
+}
+.contenedor-imagenes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* TIPOGRAFIA */
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+h2 {
+    font-size: clamp(14px, 3vw, 22px);
+}
+p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f2f2f2;
+    border: 1px solid #b2afaf;
+}
+.footer div {
+    flex: 1 1 250px;
+}
+.contacto p,
+.copyright p {
+    margin: 0.5rem 0;
+}
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.links a:hover {
+    color: #0077cc;
+}
