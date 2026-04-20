@@ -7,7 +7,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     font-size: 16px;
@@ -15,12 +15,30 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #333;
     color: #b2afaf;
     padding: 2rem;
     gap: 1rem;
     animation: fadeIn 1s ease;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    color: white;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #00bcd4;
 }
 .logo {
     width: 10%;
@@ -57,6 +75,10 @@ body {
     margin-bottom: 1rem;
     display: block;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 .texto {
     padding: 10px;
     background-color: rgba(243, 241, 241, 0.8);
@@ -70,30 +92,40 @@ body {
 /* TIPOGRAFIA */
 h1 {
     font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
 }
 h2 {
-    font-size: clamp(14px, 3vw, 22px);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 500;
 }
 p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    font-weight: 300;
 }
 /* FOOTER */
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
     background-color: #f2f2f2;
-    border: 1px solid #b2afaf;
+    padding: 2rem;
+    border-top: 1px solid #ccc;
 }
-.footer div {
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-contenedor div {
     flex: 1 1 250px;
 }
-.contacto p,
-.copyright p {
-    margin: 0.5rem 0;
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #0077cc;
 }
 .links {
     display: flex;
@@ -101,7 +133,7 @@ p {
 }
 .links a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
 }
 .links a:hover {
@@ -123,5 +155,71 @@ p {
     }
     to {
         opacity: 1;
+    }
+}
+/* MEDIA QUERIES TBALET */
+
+@media (max-width: 992px) {
+    .contenedor-de-servicios {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 992px) {
+    .contenedor-de-servicios {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+/* MEDIA QUERIES MOVIL */
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .contenedor-de-servicios {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
