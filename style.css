@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +20,7 @@ body {
     color: #b2afaf;
     padding: 2rem;
     gap: 1rem;
+    animation: fadeIn 1s ease;
 }
 .logo {
     width: 10%;
@@ -40,6 +44,12 @@ body {
     text-align: center;
     overflow: hidden;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .card img {
     width: 100%;
@@ -96,4 +106,22 @@ p {
 }
 .links a:hover {
     color: #0077cc;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
